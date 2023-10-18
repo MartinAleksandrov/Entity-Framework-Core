@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aC49qxArQzzG8B8nMDiq6qAaaqL/741hUldn/208J4uvEuMxnjvEqmNonf3oGFupr3+829YNm6e79NIQ+rvjSA==",
+  "dgSpecHash": "B6Hg+qol0H0UlkWiI8pbTuzFbsWDfwah4SB8mwuhGgDY3F6Jgu7NjWn/+lyb82/d50/T0hiMSxh0UYhRzCPiMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\35988\\Desktop\\Entity Framework Core\\Exercise ADO.NET\\Exercise ADO.NET\\Exercise ADO.NET.csproj",
+  "projectFilePath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exercise ADO.NET\\Exercise ADO.NET\\Exercise ADO.NET.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\35988\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\35988\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -52,5 +52,11 @@ namespace Exercise_ADO.NET
                                                  FROM Towns as t
                                                  JOIN Countries AS c ON c.Id = t.CountryCode
                                                 WHERE c.Name = @countryName";
+
+        public const string GetVillainNameById = @"SELECT Name FROM Villains WHERE Id = @villainId";
+
+        public const string DeleteVillainsMinions = @"DELETE FROM MinionsVillains WHERE VillainId = @villainId";
+
+        public const string DeleteVillainsById = @"DELETE FROM Villains WHERE Id = @villainId";
     }
 }

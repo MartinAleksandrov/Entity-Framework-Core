@@ -14,7 +14,7 @@ namespace Exercise_ADO.NET
             //Task-2
             //int villainId = int.Parse(Console.ReadLine());
 
-            //string res = await GetVillainsNameAndHisMinionsName(connection,villainId);
+            //string res2 = await GetVillainsNameAndHisMinionsName(connection,villainId);
 
             //Console.WriteLine(res);
 
@@ -22,16 +22,24 @@ namespace Exercise_ADO.NET
             //string[]? minnionsData = Console.ReadLine()?.Split(':', StringSplitOptions.RemoveEmptyEntries);
             //string[]? villainsData = Console.ReadLine()?.Split(": ", StringSplitOptions.RemoveEmptyEntries);
 
-            //string? result = await InsertVillainAndMinnionsAsync(connection, minnionsData, villainsData);
+            //string? result3 = await InsertVillainAndMinnionsAsync(connection, minnionsData, villainsData);
 
             //Console.WriteLine(result);
 
             //Task-4
-            string countryName = Console.ReadLine();
+            //string countryName = Console.ReadLine();
 
-            string result = await UpdateTownsByCounryAndReturnTheirName(connection,countryName);
+            //string result4 = await UpdateTownsByCounryAndReturnTheirName(connection,countryName);
 
-            await Console.Out.WriteLineAsync(result);
+            //await Console.Out.WriteLineAsync(result);
+
+            //Task-5
+            int villainId = int.Parse(Console.ReadLine());
+
+            string result5 = await DeleteVillainAndHisMinionsAsync(connection,villainId);
+
+            Console.WriteLine(result5);
+
         }
         // Task - 1
         static async Task<string> GetVillainsAndTheirMinionsAsync(SqlConnection connection)
@@ -224,6 +232,49 @@ namespace Exercise_ADO.NET
             sb.AppendLine($"{count} town names were affected.");
             sb.AppendLine($"[{string.Join(", ",towns)}]");
 
+            return sb.ToString().TrimEnd();
+        }
+        
+        //Task-5
+        static async Task<string> DeleteVillainAndHisMinionsAsync(SqlConnection connection,int villainId)
+        {
+            SqlTransaction transaction = connection.BeginTransaction();
+            StringBuilder sb = new StringBuilder();
+
+            try
+            {
+                SqlCommand getVillainNameCmd = new SqlCommand(SQLQueries.GetVillainNameById, connection, transaction);
+                getVillainNameCmd.Parameters.AddWithValue("@villainId", villainId);
+
+                object? villainNameObj = await getVillainNameCmd.ExecuteScalarAsync();
+                if (villainNameObj == null)
+                {
+                    return "No such villain was found.";
+                }
+                string villainName = (string)villainNameObj;
+
+
+                SqlCommand deleteMinionsCmd = new SqlCommand(SQLQueries.DeleteVillainsMinions, connection, transaction);
+                deleteMinionsCmd.Parameters.AddWithValue("@villainId",villainId);
+
+                int deleteMinionsCount = await deleteMinionsCmd.ExecuteNonQueryAsync();
+
+                SqlCommand deleteVillainCmd = new SqlCommand(SQLQueries.DeleteVillainsById,connection,transaction);
+                deleteVillainCmd.Parameters.AddWithValue("@villainId", villainId);
+
+                await deleteVillainCmd.ExecuteNonQueryAsync();
+
+                sb.AppendLine($"{villainName} was deleted.");
+                sb.AppendLine($"{deleteMinionsCount} minions were released.");
+
+                await transaction.CommitAsync();
+            }
+            catch (Exception)
+            {
+                transaction.Rollback();
+                throw;
+            }
+            
             return sb.ToString().TrimEnd();
         }
     }
