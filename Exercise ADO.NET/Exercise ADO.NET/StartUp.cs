@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.Data;
 using System.Text;
 
 namespace Exercise_ADO.NET
@@ -18,6 +19,7 @@ namespace Exercise_ADO.NET
 
             //Console.WriteLine(res);
 
+
             //Task-3
             //string[]? minnionsData = Console.ReadLine()?.Split(':', StringSplitOptions.RemoveEmptyEntries);
             //string[]? villainsData = Console.ReadLine()?.Split(": ", StringSplitOptions.RemoveEmptyEntries);
@@ -26,6 +28,7 @@ namespace Exercise_ADO.NET
 
             //Console.WriteLine(result);
 
+
             //Task-4
             //string countryName = Console.ReadLine();
 
@@ -33,14 +36,39 @@ namespace Exercise_ADO.NET
 
             //await Console.Out.WriteLineAsync(result);
 
+
             //Task-5
-            int villainId = int.Parse(Console.ReadLine());
+            //int villainId = int.Parse(Console.ReadLine());
 
-            string result5 = await DeleteVillainAndHisMinionsAsync(connection,villainId);
+            //string result5 = await DeleteVillainAndHisMinionsAsync(connection,villainId);
 
-            Console.WriteLine(result5);
+            //Console.WriteLine(result5);
+
+
+            //Task-6
+            //string result6 = await OrderMinionsAsync(connection);
+            //Console.WriteLine(result6);
+
+
+            //Task-7
+            //int[]? minionsId = Console.ReadLine()?.
+            //    Split(" ", StringSplitOptions.RemoveEmptyEntries).
+            //    Select(int.Parse).
+            //    ToArray();
+
+            //string result7 = await IncreaseMinionsAgeAsync(connection, minionsId);
+
+            //Console.WriteLine(result7);
+
+            // Task -8
+            int minionId = int.Parse(Console.ReadLine());
+
+            string result8 = await IncreaseAgeAsync(connection,minionId);
+
+            Console.WriteLine(result8);
 
         }
+
         // Task - 1
         static async Task<string> GetVillainsAndTheirMinionsAsync(SqlConnection connection)
         {
@@ -198,11 +226,11 @@ namespace Exercise_ADO.NET
         }
 
         // Task - 4
-        static async Task<string> UpdateTownsByCounryAndReturnTheirName(SqlConnection connection,string countryName)
+        static async Task<string> UpdateTownsByCounryAndReturnTheirName(SqlConnection connection, string countryName)
         {
 
-            SqlCommand getCountryName = new SqlCommand(SQLQueries.GetCountryName,connection);
-            getCountryName.Parameters.AddWithValue("@countryName",countryName);
+            SqlCommand getCountryName = new SqlCommand(SQLQueries.GetCountryName, connection);
+            getCountryName.Parameters.AddWithValue("@countryName", countryName);
 
             SqlDataReader reader = await getCountryName.ExecuteReaderAsync();
 
@@ -214,8 +242,8 @@ namespace Exercise_ADO.NET
             }
 
 
-            SqlCommand updateTownName = new SqlCommand(SQLQueries.UpdateTownsName,connection);
-            updateTownName.Parameters.AddWithValue("@countryName",countryName);
+            SqlCommand updateTownName = new SqlCommand(SQLQueries.UpdateTownsName, connection);
+            updateTownName.Parameters.AddWithValue("@countryName", countryName);
 
             await reader.CloseAsync();
 
@@ -230,13 +258,13 @@ namespace Exercise_ADO.NET
                 towns.Add(town);
             }
             sb.AppendLine($"{count} town names were affected.");
-            sb.AppendLine($"[{string.Join(", ",towns)}]");
+            sb.AppendLine($"[{string.Join(", ", towns)}]");
 
             return sb.ToString().TrimEnd();
         }
-        
-        //Task-5
-        static async Task<string> DeleteVillainAndHisMinionsAsync(SqlConnection connection,int villainId)
+
+        // Task - 5
+        static async Task<string> DeleteVillainAndHisMinionsAsync(SqlConnection connection, int villainId)
         {
             SqlTransaction transaction = connection.BeginTransaction();
             StringBuilder sb = new StringBuilder();
@@ -255,11 +283,11 @@ namespace Exercise_ADO.NET
 
 
                 SqlCommand deleteMinionsCmd = new SqlCommand(SQLQueries.DeleteVillainsMinions, connection, transaction);
-                deleteMinionsCmd.Parameters.AddWithValue("@villainId",villainId);
+                deleteMinionsCmd.Parameters.AddWithValue("@villainId", villainId);
 
                 int deleteMinionsCount = await deleteMinionsCmd.ExecuteNonQueryAsync();
 
-                SqlCommand deleteVillainCmd = new SqlCommand(SQLQueries.DeleteVillainsById,connection,transaction);
+                SqlCommand deleteVillainCmd = new SqlCommand(SQLQueries.DeleteVillainsById, connection, transaction);
                 deleteVillainCmd.Parameters.AddWithValue("@villainId", villainId);
 
                 await deleteVillainCmd.ExecuteNonQueryAsync();
@@ -274,7 +302,97 @@ namespace Exercise_ADO.NET
                 transaction.Rollback();
                 throw;
             }
-            
+
+            return sb.ToString().TrimEnd();
+        }
+
+        // Task - 6
+        static async Task<string> OrderMinionsAsync(SqlConnection connection)
+        {
+            var sb = new StringBuilder();
+
+            SqlCommand orderMinionsCmd = new SqlCommand(SQLQueries.OrderMinions, connection);
+            SqlDataReader minionReader = await orderMinionsCmd.ExecuteReaderAsync();
+
+            var minionList = new List<string>();
+
+            while (minionReader.Read())
+            {
+                string minionName = (string)minionReader["Name"];
+                minionList.Add(minionName);
+            }
+
+            int k = 0;
+            int t = 1;
+            for (int i = 0; i < minionList.Count; i++)
+            {
+                if (i % 2 == 0 || i == 0)
+                {
+                    sb.AppendLine(minionList[0 + k++]);
+                }
+                else
+                {
+                    sb.AppendLine(minionList[minionList.Count - t++]);
+                }
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        // Task -7
+        static async Task<string> IncreaseMinionsAgeAsync(SqlConnection connection, int[] minionsId)
+        {
+            var sb = new StringBuilder();
+
+            SqlCommand updateMinionsAgeCmd = new SqlCommand(SQLQueries.UpdateMinionsAge, connection);
+
+            foreach (var id in minionsId)
+            {
+                updateMinionsAgeCmd.Parameters.Clear();
+                updateMinionsAgeCmd.Parameters.AddWithValue("@Id", id);
+                await updateMinionsAgeCmd.ExecuteNonQueryAsync();
+            }
+
+
+            SqlCommand getAllMinionsCmd = new SqlCommand(SQLQueries.GetAllMinionsNameAndAge, connection);
+
+            SqlDataReader minionReader = await getAllMinionsCmd.ExecuteReaderAsync();
+
+            while (minionReader.Read())
+            {
+                string minionName = (string)minionReader["Name"];
+                int minionAge = (int)minionReader["Age"];
+
+                sb.AppendLine($"{minionName} {minionAge}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        // Task -8
+        static async Task<string> IncreaseAgeAsync(SqlConnection connection,int minionId)
+        {
+            SqlCommand increaseAgeCmd = new SqlCommand(SQLQueries.StoredProcedureIncreaseMinionsAge, connection); // Replace with your actual stored procedure name
+
+            increaseAgeCmd.CommandType = CommandType.StoredProcedure;
+            increaseAgeCmd.Parameters.AddWithValue("@id", minionId);
+
+            await increaseAgeCmd.ExecuteNonQueryAsync();
+
+            SqlCommand getMinionsNameAndAgeCmd = new SqlCommand(SQLQueries.GetMinionNameAndAgeById, connection);
+            getMinionsNameAndAgeCmd.Parameters.AddWithValue("@Id", minionId);
+
+            SqlDataReader reader = await getMinionsNameAndAgeCmd.ExecuteReaderAsync();
+
+            var sb = new StringBuilder();
+            while (reader.Read())
+            {
+                string minionName = (string)reader["Name"];
+                int minionAge = (int)reader["Age"];
+
+                sb.AppendLine($"{minionName} - {minionAge} years old");
+            }
+
             return sb.ToString().TrimEnd();
         }
     }
