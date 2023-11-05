@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WHbdMDv6i5BbMyc0YLamuYX5rxIWOaplLG1t1AgqOA9mnNBHvf5043e1ZmsiRlJl9s3I6a0d5gQgrf9/Omt6ZQ==",
+  "dgSpecHash": "Xjf5GGzI3GybpTjvgujpQ8WnXUOOD61FI5nOPyk30ZLpsgjI4Qes4Mxvtn9ZD+W8EI2XL1CyzLVDN7+L+4cuTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\35988\\Desktop\\02. Age Restriction_Skeleton\\BookShop.Models\\BookShop.Models.csproj",
+  "projectFilePath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Advanced Querying\\BookShop.Models\\BookShop.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

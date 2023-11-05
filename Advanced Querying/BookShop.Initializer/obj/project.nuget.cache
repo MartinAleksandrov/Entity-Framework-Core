@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8zDIQvjPzDITaiUGq8HNYqBTPtvycrQMzist29J2mf4Srf1jpbrR/r3bApcG4rx7lAgRqunwdVYtIOaRe0ZvKQ==",
+  "dgSpecHash": "7Rw3F+p4L5V6DuKCBuAass2TuGZk0AfSAUk5jfa7z7RtBuI7rhte0j4gw0BJ3Ucg37PVas8xtB65xBxfTjh03w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\35988\\Desktop\\02. Age Restriction_Skeleton\\BookShop.Initializer\\BookShop.Initializer.csproj",
+  "projectFilePath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Advanced Querying\\BookShop.Initializer\\BookShop.Initializer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\35988\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\35988\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

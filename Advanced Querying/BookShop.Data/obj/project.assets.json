@@ -6994,11 +6994,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\35988\\Desktop\\02. Age Restriction_Skeleton\\BookShop.Data\\BookShop.Data.csproj",
+      "projectUniqueName": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Advanced Querying\\BookShop.Data\\BookShop.Data.csproj",
       "projectName": "BookShop.Data",
-      "projectPath": "C:\\Users\\35988\\Desktop\\02. Age Restriction_Skeleton\\BookShop.Data\\BookShop.Data.csproj",
+      "projectPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Advanced Querying\\BookShop.Data\\BookShop.Data.csproj",
       "packagesPath": "C:\\Users\\35988\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\35988\\Desktop\\02. Age Restriction_Skeleton\\BookShop.Data\\obj\\",
+      "outputPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Advanced Querying\\BookShop.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\35988\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7015,8 +7015,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\35988\\Desktop\\02. Age Restriction_Skeleton\\BookShop.Models\\BookShop.Models.csproj": {
-              "projectPath": "C:\\Users\\35988\\Desktop\\02. Age Restriction_Skeleton\\BookShop.Models\\BookShop.Models.csproj"
+            "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Advanced Querying\\BookShop.Models\\BookShop.Models.csproj": {
+              "projectPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Advanced Querying\\BookShop.Models\\BookShop.Models.csproj"
             }
           }
         }

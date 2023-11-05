@@ -1,17 +1,17 @@
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\bin\Debug\net6.0\BookShop.Initializer.deps.json
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\bin\Debug\net6.0\BookShop.Initializer.dll
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\bin\Debug\net6.0\BookShop.Initializer.pdb
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\bin\Debug\net6.0\BookShop.Data.dll
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\bin\Debug\net6.0\BookShop.Models.dll
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\bin\Debug\net6.0\BookShop.Data.pdb
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\bin\Debug\net6.0\BookShop.Models.pdb
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.csproj.AssemblyReference.cache
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.AssemblyInfoInputs.cache
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.AssemblyInfo.cs
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.csproj.CoreCompileInputs.cache
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.csproj.CopyComplete
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.dll
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\obj\Debug\net6.0\refint\BookShop.Initializer.dll
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.pdb
-C:\Users\35988\Desktop\02. Age Restriction_Skeleton\BookShop.Initializer\obj\Debug\net6.0\ref\BookShop.Initializer.dll
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\bin\Debug\net6.0\BookShop.Initializer.deps.json
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\bin\Debug\net6.0\BookShop.Initializer.dll
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\bin\Debug\net6.0\BookShop.Initializer.pdb
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\bin\Debug\net6.0\BookShop.Data.dll
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\bin\Debug\net6.0\BookShop.Models.dll
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\bin\Debug\net6.0\BookShop.Data.pdb
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\bin\Debug\net6.0\BookShop.Models.pdb
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.csproj.AssemblyReference.cache
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.AssemblyInfoInputs.cache
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.AssemblyInfo.cs
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.csproj.CoreCompileInputs.cache
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.csproj.CopyComplete
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.dll
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\obj\Debug\net6.0\refint\BookShop.Initializer.dll
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\obj\Debug\net6.0\BookShop.Initializer.pdb
+C:\Users\35988\Desktop\Entity-Framework-Core\Advanced Querying\BookShop.Initializer\obj\Debug\net6.0\ref\BookShop.Initializer.dll

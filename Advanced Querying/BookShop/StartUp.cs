@@ -7,6 +7,7 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.ValueGeneration;
     using System.Globalization;
+    using System.Linq;
     using System.Net.Http.Headers;
     using System.Text;
 
@@ -17,10 +18,10 @@
             using var db = new BookShopContext();
             DbInitializer.ResetDatabase(db);
 
-            string input = Console.ReadLine()!;
+            //string input = Console.ReadLine()!;
 
-            string result = GetAuthorNamesEndingIn(db, input);
-            Console.WriteLine(result);
+            //int result = RemoveBooks(db);
+            //Console.WriteLine(result);
 
         }
 
@@ -112,7 +113,7 @@
         public static string GetBooksByCategory(BookShopContext context, string input)
         {
             var categories = input.ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            
+
             StringBuilder sb = new StringBuilder();
 
             var books = context.Books
@@ -174,7 +175,156 @@
             }
             return sb.ToString().TrimEnd();
         }
+
+
+        //TASK-9.Book Search
+        public static string GetBookTitlesContaining(BookShopContext context, string input)
+        {
+            var books = context.Books
+                .Where(b => b.Title.ToLower().Contains(input.ToLower()))
+                .OrderBy(b => b.Title)
+                .Select(b => b.Title)
+                .ToArray();
+
+            return string.Join(Environment.NewLine, books);
+        }
+
+
+        //TASK-10.Book Search by Author
+        public static string GetBooksByAuthor(BookShopContext context, string input)
+        {
+            var books = context.Books
+                .Where(b => b.Author.LastName.ToLower().StartsWith(input.ToLower()))
+                .OrderBy(b => b.BookId)
+                .Select(b => new
+                {
+                    FullName = $"{b.Author.FirstName} {b.Author.LastName}",
+                    b.Title
+                })
+                .AsNoTracking()
+                .ToArray();
+
+            return string.Join(Environment.NewLine, books.Select(b => $"{b.Title} ({b.FullName})"));
+        }
+
+
+        //TASK-11.Count Books
+        public static int CountBooks(BookShopContext context, int lengthCheck)
+        {
+            var books = context.Books
+                .Where(b => b.Title.Length > lengthCheck)
+                .AsNoTracking()
+                .ToArray();
+
+            return books.Count();
+        }
+
+
+        //TASK-12.Total Book Copies
+        public static string CountCopiesByAuthor(BookShopContext context)
+        {
+            var books = context.Authors
+                .Select(a => new
+                {
+                    FullName = $"{a.FirstName} {a.LastName}",
+                    allCopies = a.Books.Sum(b => b.Copies)
+
+                })
+                .OrderByDescending(a => a.allCopies)
+                .AsNoTracking()
+                .ToArray();
+
+            return string.Join(Environment.NewLine, books.Select(b => $"{b.FullName} - {b.allCopies}"));
+        }
+
+
+        //TASK-13.Profit by Category
+        public static string GetTotalProfitByCategory(BookShopContext context)
+        {
+            var books = context.Categories
+                .Select(b => new
+                {
+                    categoryName = b.Name,
+                    TotalProfit = b.CategoryBooks.Sum(b => b.Book.Copies * b.Book.Price)
+                })
+                .OrderByDescending(b => b.TotalProfit)
+                .ThenBy(b => b.categoryName)
+                .AsNoTracking()
+                .ToArray();
+
+            return string.Join(Environment.NewLine, books.Select(b => $"{b.categoryName} ${b.TotalProfit:f2}"));
+        }
+
+
+        //TASK-14.Most Recent Books
+        public static string GetMostRecentBooks(BookShopContext context)
+        {
+            var books = context.Categories
+                .Select(b => new
+                {
+                    categotyName = b.Name,
+
+                    booksByCateg = b.CategoryBooks
+                    .OrderByDescending(b => b.Book.ReleaseDate)
+                    .Select(cb => new
+                    {
+                        cb.Book.Title,
+                        Years = cb.Book.ReleaseDate!.Value.Year
+                    })
+                    .Take(3)
+                    .ToArray()
+                })
+                .OrderBy(b => b.categotyName)
+                .AsNoTracking()
+                .ToArray();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var book in books)
+            {
+                sb.AppendLine($"--{book.categotyName}");
+
+                foreach (var cate in book.booksByCateg)
+                {
+                    sb.AppendLine($"{cate.Title} ({cate.Years})");
+                }
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+
+        //TASK-15.Increase Prices
+        public static void IncreasePrices(BookShopContext context)
+        {
+            var books = context.Books
+                .Where(b => b.ReleaseDate!.Value.Year < 2010);
+
+            foreach (var book in books)
+            {
+                book.Price += 5;
+            }
+
+            context.SaveChanges();
+        }
+
+
+        //TASK-16.Remove Books
+        public static int RemoveBooks(BookShopContext context)
+        {
+            var books = context.Books
+                .Where(b => b.Copies < 4200)
+                .ToArray();
+
+
+            foreach (var book in books)
+            {
+                context.Remove(book);
+            }
+
+            context.SaveChanges();
+
+            return books.Count();
+        }
     }
 }
-
-
