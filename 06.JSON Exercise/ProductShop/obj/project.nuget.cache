@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a1xz28qfuX54m+aRA1hRjDjB3CFSZ+GSdhzt34SrW8nKh4PeIj9Gd4rZBFGNIHsSNye0kLVmn+0y8HLd72Yq2Q==",
+  "dgSpecHash": "Va7yuGE3c/xkUxUoRRGBF0UHRgvCfCwPyqSktZT1Ua6AyY5PdC8ZbfNHWwvSaayN1pSnmg58wJTkTDrGDpn7IA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\35988\\Desktop\\01. Import Users_Skeleton (Product Shop)\\ProductShop\\ProductShop.csproj",
+  "projectFilePath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\06.JSON Exercise\\ProductShop\\ProductShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\35988\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\35988\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\35988\\Desktop\\01. Import Users_Skeleton (Product Shop)\\ProductShop\\ProductShop.csproj": {}
+    "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\06.JSON Exercise\\ProductShop\\ProductShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\35988\\Desktop\\01. Import Users_Skeleton (Product Shop)\\ProductShop\\ProductShop.csproj": {
+    "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\06.JSON Exercise\\ProductShop\\ProductShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\35988\\Desktop\\01. Import Users_Skeleton (Product Shop)\\ProductShop\\ProductShop.csproj",
+        "projectUniqueName": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\06.JSON Exercise\\ProductShop\\ProductShop.csproj",
         "projectName": "ProductShop",
-        "projectPath": "C:\\Users\\35988\\Desktop\\01. Import Users_Skeleton (Product Shop)\\ProductShop\\ProductShop.csproj",
+        "projectPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\06.JSON Exercise\\ProductShop\\ProductShop.csproj",
         "packagesPath": "C:\\Users\\35988\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\35988\\Desktop\\01. Import Users_Skeleton (Product Shop)\\ProductShop\\obj\\",
+        "outputPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\06.JSON Exercise\\ProductShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\35988\\AppData\\Roaming\\NuGet\\NuGet.Config",
