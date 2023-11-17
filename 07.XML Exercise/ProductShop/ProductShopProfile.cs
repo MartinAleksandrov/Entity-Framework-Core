@@ -28,18 +28,28 @@ namespace ProductShop
 
 
             //Export UsersDto
-            this.CreateMap<User, ExportUsersDto>()
-                .ForMember(d => d.ProductSold, opt => opt.MapFrom(d => d.ProductsSold));
-
-            //Export nested product 
-            this.CreateMap<Product,ExpotProductNestedDto>();
-
+            //this.CreateMap<User, ExportUsersDto>()
+            //    .ForMember(d => d.ProductSold, opt => opt.MapFrom(d => d.ProductsSold));
 
             //Export Categories 
             this.CreateMap<Category, ExportCategoryDto>()
                 .ForMember(s => s.AveragePrice, opt => opt.MapFrom(d => d.CategoryProducts.Average(c => c.Product.Price)))
                 .ForMember(s => s.TotalRevenue, opt => opt.MapFrom(d => d.CategoryProducts.Sum(c => c.Product.Price)))
                 .ForMember(s => s.Count, opt => opt.MapFrom(d => d.CategoryProducts.Count));
+
+
+            //Export UsersWhithProducts
+            this.CreateMap<User, ExportUsersCountDto>();
+
+            this.CreateMap<User, ExportUserWhithProductsDto>()
+                .ForMember(s => s.SoldProducts, opt => opt.MapFrom(d => d.ProductsSold));
+
+            //Export nested product 
+            this.CreateMap<User, ExportUserWhithProductsDto>()
+                .IgnoreAllPropertiesWithAnInaccessibleSetter();
+
+
+            this.CreateMap<Product, ExportProductWhithNameAndPrice>();
         }
     }
 }

@@ -7,13 +7,13 @@ using System.Xml.Serialization;
 
 namespace ProductShop.DTOs.Export
 {
-    [XmlType("SoldProducts")]
-    public class ExpotProductNestedDto
+    [XmlType("Users")]
+    public class ExportUsersCountDto
     {
         [XmlElement("count")]
         public int Count { get; set; }
 
-        [XmlArray("products")]
-        public ExportProductWhithNameAndPrice[] Products { get; set; } = null!;
+        [XmlArray("users")]
+        public ExportUserWhithProductsDto[] Users { get; set; }
     }
 }

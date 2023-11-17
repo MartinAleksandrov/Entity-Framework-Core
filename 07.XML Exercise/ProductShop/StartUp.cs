@@ -19,7 +19,7 @@ namespace ProductShop
 
             //var inputXML = File.ReadAllText(@"../../../Datasets/categories-products.xml");
 
-            string result = GetCategoriesByProductsCount(productShopContext);
+            string result = GetUsersWithProducts(productShopContext);
             Console.WriteLine(result);
         }
 
@@ -206,6 +206,45 @@ namespace ProductShop
                 .ToArray();
 
             return xmlHelper.Serialize(categories, "Categories");
+        }
+
+
+        //8. Export Users and Products
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            IMapper mapper = CreateMapper();
+
+            var helper = new XmlHelper();
+
+            var soldProducts = context
+           .Users
+           .AsNoTracking()
+           .Where(u => u.ProductsSold.Any())
+           .OrderBy(u => u.ProductsSold.Count)
+           .Select(u => new ExportUserWhithProductsDto()
+           {
+               FirstName = u.FirstName,
+               LastName = u.LastName,
+               Age = u.Age,
+
+               SoldProducts = new ExpotProductNestedDto()
+               {
+                   Count = u.ProductsSold.Count,
+
+                   Products = u.ProductsSold
+                   .Select(ps => new ExportProductWhithNameAndPrice()
+                   {
+                       Name = ps.Name,
+                       Price = ps.Price
+
+                   })
+                   .OrderByDescending(ps => ps.Price)
+                   .ToArray()
+               }
+           })
+           .ToArray();
+
+            return helper.Serialize(soldProducts, "Users");
         }
     }
 }
