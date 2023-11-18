@@ -5,22 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace CarDealer.DTOs.Import
+namespace CarDealer.DTOs.Export
 {
-    [XmlType("Car")]
-    public class ImportCarsDto
+    [XmlType("car")]
+    public class ExportCarsWhithPartsDto
     {
-        [XmlElement("make")]
+        [XmlAttribute("make")]
         public string Make { get; set; } = null!;
 
-        [XmlElement("model")]
+        [XmlAttribute("model")]
         public string Model { get; set; } = null!;
 
-        [XmlElement("traveledDistance")]
+        [XmlAttribute("traveled-distance")]
         public long TraveledDistance { get; set; }
 
         [XmlArray("parts")]
-        public ImportCarsIdDto[] Parts { get; set; }
-
+        public ExportPartsForCarsDto[] Parts { get; set; }
     }
 }
