@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Invoices\\Invoices.csproj": {}
+    "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 1\\Invoices\\Invoices.csproj": {}
   },
   "projects": {
-    "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Invoices\\Invoices.csproj": {
+    "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 1\\Invoices\\Invoices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Invoices\\Invoices.csproj",
+        "projectUniqueName": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 1\\Invoices\\Invoices.csproj",
         "projectName": "Invoices",
-        "projectPath": "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Invoices\\Invoices.csproj",
+        "projectPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 1\\Invoices\\Invoices.csproj",
         "packagesPath": "C:\\Users\\35988\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Invoices\\obj\\",
+        "outputPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 1\\Invoices\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\35988\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -16,7 +16,7 @@ namespace Invoices
 
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
 
-            //ExportEntities(context, projectDir + @"ExportResults/");
+            ExportEntities(context, projectDir + @"ExportResults/");
 
             using (var transaction = context.Database.BeginTransaction())
             {
@@ -26,15 +26,15 @@ namespace Invoices
 
         private static void ImportEntities(InvoicesContext context, string baseDir, string exportDir)
         {
-            //var clients =
-            //    DataProcessor.Deserializer.ImportClients(context,
-            //        File.ReadAllText(baseDir + "clients.xml"));
-            //PrintAndExportEntityToFile(clients, exportDir + "Actual Result - ImportClients.txt");
+            var clients =
+                DataProcessor.Deserializer.ImportClients(context,
+                    File.ReadAllText(baseDir + "clients.xml"));
+            PrintAndExportEntityToFile(clients, exportDir + "Actual Result - ImportClients.txt");
 
-            //var invoices =
-            //    DataProcessor.Deserializer.ImportInvoices(context,
-            //        File.ReadAllText(baseDir + "invoices.json"));
-            //PrintAndExportEntityToFile(invoices, exportDir + "Actual Result - ImportInvoices.txt");
+            var invoices =
+                DataProcessor.Deserializer.ImportInvoices(context,
+                    File.ReadAllText(baseDir + "invoices.json"));
+            PrintAndExportEntityToFile(invoices, exportDir + "Actual Result - ImportInvoices.txt");
 
             var products =
              DataProcessor.Deserializer.ImportProducts(context,

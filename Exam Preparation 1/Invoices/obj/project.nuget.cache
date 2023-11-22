@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4Jn/7Pj6HtkeccBlUYXqHh5QpHjaOHeqTIU2Yhp1q4DwzFRsM0RWJU7Iy4iAWgDAtsof8NiM5h6no5oibLUipw==",
+  "dgSpecHash": "XaIfYEWanhl3xILKloJ/VjI9j22tu148Maoa3ga0nf32+RntevCL6lnJTlEpN4IKtVcEtOUBvrmePMY+lwiMaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Invoices\\Invoices.csproj",
+  "projectFilePath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 1\\Invoices\\Invoices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\35988\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\35988\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",

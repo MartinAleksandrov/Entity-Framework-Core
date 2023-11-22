@@ -1,0 +1,57 @@
+[
+  {
+    "Name": "ADR Kit HU12006Z",
+    "Price": 27.50,
+    "Categoty": "Filters",
+    "Clients": [
+      {
+        "Name": "ADR Kit HU12006Z",
+        "NumberVat": "EL801106064"
+      }
+    ]
+  },
+  {
+    "Name": "ADR Kit HU12140X",
+    "Price": 92.47,
+    "Categoty": "Filters",
+    "Clients": [
+      {
+        "Name": "ADR Kit HU12140X",
+        "NumberVat": "SE556488676901"
+      }
+    ]
+  },
+  {
+    "Name": "ADR Kit U58/9KIT",
+    "Price": 84.00,
+    "Categoty": "Filters",
+    "Clients": [
+      {
+        "Name": "ADR Kit U58/9KIT",
+        "NumberVat": "DE814592224"
+      }
+    ]
+  },
+  {
+    "Name": "ADR Kit U6202Y KIT",
+    "Price": 47.86,
+    "Categoty": "Filters",
+    "Clients": [
+      {
+        "Name": "ADR Kit U6202Y KIT",
+        "NumberVat": "IT00364840074"
+      }
+    ]
+  },
+  {
+    "Name": "Continental M+S 315/60R22.5",
+    "Price": 78.38,
+    "Categoty": "Tyres",
+    "Clients": [
+      {
+        "Name": "Continental M+S 315/60R22.5",
+        "NumberVat": "ESB13131654"
+      }
+    ]
+  }
+]
