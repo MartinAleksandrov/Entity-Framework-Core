@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Boardgames\\Boardgames.csproj": {}
+    "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 2\\Boardgames\\Boardgames.csproj": {}
   },
   "projects": {
-    "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Boardgames\\Boardgames.csproj": {
+    "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 2\\Boardgames\\Boardgames.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Boardgames\\Boardgames.csproj",
+        "projectUniqueName": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 2\\Boardgames\\Boardgames.csproj",
         "projectName": "Boardgames",
-        "projectPath": "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Boardgames\\Boardgames.csproj",
+        "projectPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 2\\Boardgames\\Boardgames.csproj",
         "packagesPath": "C:\\Users\\35988\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Boardgames\\obj\\",
+        "outputPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 2\\Boardgames\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\35988\\AppData\\Roaming\\NuGet\\NuGet.Config",

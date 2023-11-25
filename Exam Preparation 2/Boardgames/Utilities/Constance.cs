@@ -16,8 +16,12 @@
 
         //Seller
         public const int MaxSellerName = 20;
+        public const int MinSellerName = 5;
 
         public const int MaxAddressLenght = 30;
+        public const int MinAddressLenght = 2;
+
+        public const string WebSiteRegex = @"^www\.[a-zA-Z0-9\-]+\.com$";
 
         public const int MaxFirstNameCreator = 7;
         public const int MinFirstNameCreator = 2;

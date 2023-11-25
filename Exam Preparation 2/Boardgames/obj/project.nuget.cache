@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h8WtH7ROnZHsDVkXn3OYxCOtNHuh7BnP1uw5oZs1Dnz1QWVLNinfhdLLLzwzeNsmn4dWf8TBN/cjQFBLc3/zTg==",
+  "dgSpecHash": "NkrpaZpMwzcr19Dw8XJNBzS3DTPOpD6sh0bZ2uUt43zHT5FkQe+Ft1p8bXI0+JTksKjKpI/eijqN79QfqJhJGQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\35988\\Desktop\\01-Model-Definition-Skeleton\\Boardgames\\Boardgames.csproj",
+  "projectFilePath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\Exam Preparation 2\\Boardgames\\Boardgames.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\35988\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\35988\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
