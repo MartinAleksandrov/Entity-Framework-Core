@@ -4,6 +4,7 @@
     {
         //Truck
         public const int MaxRegistrationNum = 8;
+        public const string RegistrationNumberRegex = @"^[A-Z]{2}\d{4}[A-Z]{2}$";
 
         public const int MaxVinNumLenght = 17;
 
