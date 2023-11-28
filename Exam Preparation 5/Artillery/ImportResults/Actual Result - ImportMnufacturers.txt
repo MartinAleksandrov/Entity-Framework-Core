@@ -1,0 +1,29 @@
+Successfully import manufacturer BAE Systems founded in 30 November 1999, London, England.
+Invalid data.
+Successfully import manufacturer Aviation Industry Corporation of China founded in April 1, 1951, Chaoyang District, Beijing, China.
+Successfully import manufacturer General Dynamics founded in February 7, 1899, Reston, Virginia, United States.
+Successfully import manufacturer General Dynamics founded in February 7, 1899, Reston, Virginia, United States.
+Successfully import manufacturer Raytheon Technologies founded in 2020, Waltham, Massachusetts, United States.
+Successfully import manufacturer Northrop Grumman founded in 1994, 2980 Fairview Park Drive, West Falls Church, Virginia, United States.
+Successfully import manufacturer Lockheed Martin founded in March 15, 1995, Bethesda, Maryland, United States.
+Successfully import manufacturer Izhmekh founded in July 20, 1942, Izhevsk, USSR.
+Invalid data.
+Invalid data.
+Successfully import manufacturer Škoda founded in Plzeň 1859, Kingdom of Bohemia, Austrian Empire.
+Successfully import manufacturer BAE Systems founded in 30 November 1999, London, England.
+Successfully import manufacturer Krupp founded in 1881, Essen, German Empire.
+Successfully import manufacturer Obukhov State Plant founded in 1863, Saint Petersburg, Russia.
+Invalid data.
+Successfully import manufacturer Putilov plant founded in February 28, 1801, Helsinki, Coast Gulf of Finland.
+Successfully import manufacturer Schneider et Cie founded in 1836, Schneider et Cie, France.
+Successfully import manufacturer Colt's Manufacturing Company founded in 1855, Hartford, Connecticut, United States.
+Successfully import manufacturer Glock Ges.m.b.H. founded in 1942, Wien,  Austria.
+Successfully import manufacturer Almaz-Antey founded in 2002, Moscow, Russia.
+Successfully import manufacturer Thales Group founded in 6 December 2000, Paris, France.
+Successfully import manufacturer Leonardo S.p.A. founded in 1948, Rome, Italy.
+Successfully import manufacturer Raytheon Technologies founded in 1992, Boston, United States.
+Successfully import manufacturer L3Harris Technologies founded in June 29, 2019, Melbourne, Florida, United States.
+Successfully import manufacturer Norinco founded in August 1988, Xicheng District, Beijing, China.
+Invalid data.
+Successfully import manufacturer China Electronics Technology Group founded in March 1, 2002, Haidian District, Beijing, China.
+Successfully import manufacturer Putilov plant founded in February 28, 1801, Helsinki, Coast Gulf of Finland.
