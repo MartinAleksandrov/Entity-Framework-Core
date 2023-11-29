@@ -1,14 +1,9 @@
-﻿using Invoices.Data.Models.Enums;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Invoices.Data.Models
+﻿namespace Invoices.Data.Models
 {
+    using Invoices.Data.Models.Enums;
+    using Newtonsoft.Json;
+    using System.ComponentModel.DataAnnotations;
+
     public class Product
     {
         public Product()

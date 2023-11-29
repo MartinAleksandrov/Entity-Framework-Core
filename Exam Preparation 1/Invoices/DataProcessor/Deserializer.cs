@@ -42,10 +42,10 @@
                     continue;
                 }
 
-                Client client = new Client
+                Client client = new Client()
                 {
                     Name = clientDto.Name,
-                    NumberVat = clientDto.NumberVat,
+                    NumberVat = clientDto.NumberVat
                 };
 
                 foreach (var adressDto in clientDto.Addresses)
@@ -55,12 +55,13 @@
                         sb.AppendLine(ErrorMessage);
                         continue;
                     }
+                    
 
                     Address address = new Address
                     {
                         StreetName = adressDto.StreetName,
                         StreetNumber = adressDto.StreetNumber,
-                        PostCode = adressDto.PostCode,
+                        PostCode = adressDto.PostCode.ToString(),
                         City = adressDto.City,
                         Country = adressDto.Country
                     };
@@ -68,7 +69,7 @@
                     client.Addresses.Add(address);
                 }
                 validClients.Add(client);
-                sb.AppendLine(String.Format(Deserializer.SuccessfullyImportedClients, clientDto.Name));
+                sb.AppendLine(String.Format(SuccessfullyImportedClients, clientDto.Name));
             }
 
             context.Clients.AddRange(validClients);

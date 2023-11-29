@@ -10,7 +10,7 @@
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(1500000000)]
+        [MaxLength(1_500_000_000)]
         public int Number  { get; set; }
 
         [Required]
@@ -26,9 +26,10 @@
         public CurrencyType CurrencyType { get; set; }
 
         [Required]
+        [ForeignKey(nameof(Client))]
         public int ClientId  { get; set; }
 
-        [ForeignKey(nameof(ClientId))]
+        [Required]
         public Client Client { get; set; } = null!;
 
 

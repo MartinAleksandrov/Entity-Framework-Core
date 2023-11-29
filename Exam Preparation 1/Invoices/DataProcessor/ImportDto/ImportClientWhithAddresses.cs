@@ -8,8 +8,8 @@
     {
         [XmlElement("StreetName")]
         [Required]
-        [MaxLength(20)]
         [MinLength(10)]
+        [MaxLength(20)]
         public string StreetName { get; set; } = null!;
 
 
@@ -20,7 +20,7 @@
 
         [XmlElement("PostCode")]
         [Required]
-        public string PostCode { get; set; } = null!;
+        public string PostCode { get; set; } = null!;    
 
 
         [XmlElement("City")]

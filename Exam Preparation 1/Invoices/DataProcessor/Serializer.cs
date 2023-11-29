@@ -34,6 +34,7 @@
 
             var products = context.Products
                 .Where(p => p.ProductsClients.Any(pc => pc.Client.Name.Length >= nameLength))
+                .ToArray()
                 .Select(p => new
                 {
                     p.Name,
@@ -41,16 +42,15 @@
                     Categoty = p.CategoryType.ToString(),
                     Clients = p.ProductsClients
                     .Where(pc => pc.Client.Name.Length >= nameLength)
-                    .OrderBy(pc => pc.Client.Name)
-                    .ToArray()
                     .Select(pc => new
                     {
                         p.Name,
                         NumberVat = pc.Client.NumberVat,
                     })
+                    .OrderBy(pc => pc.Name)
                     .ToArray()
                 })
-                .OrderBy(p => p.Clients.Length)
+                .OrderByDescending(p => p.Clients.Count())
                 .ThenBy(p => p.Name)
                 .Take(5)
                 .ToArray();

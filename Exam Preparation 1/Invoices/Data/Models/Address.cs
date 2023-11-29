@@ -9,6 +9,7 @@
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(20)]
         public string StreetName { get; set; } = null!;
 
 
@@ -32,6 +33,7 @@
         [ForeignKey(nameof(Client))]
         public int ClientId { get; set; }
 
+        [Required]
         public Client Client { get; set; } = null!;
     }
 }
