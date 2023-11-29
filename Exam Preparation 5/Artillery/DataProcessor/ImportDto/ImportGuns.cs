@@ -35,9 +35,8 @@
 
 
         [JsonProperty("GunType")]
-        [Required]
         [Range(0,5)]
-        public string GunType { get; set; }
+        public string? GunType { get; set; }
 
 
         [JsonProperty("ShellId")]
@@ -46,6 +45,6 @@
 
 
         [JsonProperty("Countries")]
-        public ImportCountriesIds[] Countries { get; set; }
+        public ImportCountriesIds[]? Countries { get; set; }
     }
 }
