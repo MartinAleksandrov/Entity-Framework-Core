@@ -25,15 +25,15 @@
 
         [XmlElement("City")]
         [Required]
-        [MaxLength(5)]
-        [MinLength(15)]
+        [MaxLength(15)]
+        [MinLength(5)]
         public string City { get; set; } = null!;
 
 
         [XmlElement("Country")]
         [Required]
-        [MaxLength(5)]
-        [MinLength(15)]
+        [MaxLength(15)]
+        [MinLength(5)]
         public string Country { get; set; } = null!;
     }
 }

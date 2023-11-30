@@ -25,16 +25,14 @@
 
         public static string ImportClients(InvoicesContext context, string xmlString)
         {
-            XmlHelper xmlHelper = new XmlHelper();
-
-            var clientsDtos = xmlHelper
-                .Deserialize<ImportClientsDto[]>(xmlString, "Clients");
-
-            var validClients = new HashSet<Client>();
-
             var sb = new StringBuilder();
+            var xmlHelper = new XmlHelper();
 
-            foreach (var clientDto in clientsDtos)
+            var clientDtos = xmlHelper.Deserialize<ImportClientsDto[]>(xmlString, "Clients");
+
+            ICollection<Client> validClients = new HashSet<Client>();
+
+            foreach (var clientDto in clientDtos)
             {
                 if (!IsValid(clientDto))
                 {
@@ -42,34 +40,37 @@
                     continue;
                 }
 
-                Client client = new Client()
-                {
-                    Name = clientDto.Name,
-                    NumberVat = clientDto.NumberVat
-                };
+                ICollection<Address> validAddresses = new HashSet<Address>();
 
-                foreach (var adressDto in clientDto.Addresses)
+                foreach (var addressDto in clientDto.Addresses)
                 {
-                    if (!IsValid(adressDto))
+                    if (!IsValid(addressDto))
                     {
                         sb.AppendLine(ErrorMessage);
                         continue;
                     }
-                    
 
-                    Address address = new Address
+                    var address = new Address
                     {
-                        StreetName = adressDto.StreetName,
-                        StreetNumber = adressDto.StreetNumber,
-                        PostCode = adressDto.PostCode.ToString(),
-                        City = adressDto.City,
-                        Country = adressDto.Country
+                        StreetName = addressDto.StreetName,
+                        StreetNumber = addressDto.StreetNumber,
+                        PostCode = addressDto.PostCode,
+                        City = addressDto.City,
+                        Country = addressDto.Country
                     };
 
-                    client.Addresses.Add(address);
+                    validAddresses.Add(address);
                 }
+
+                var client = new Client
+                {
+                    Name = clientDto.Name,
+                    NumberVat = clientDto.NumberVat,
+                    Addresses = validAddresses
+                };
+
                 validClients.Add(client);
-                sb.AppendLine(String.Format(SuccessfullyImportedClients, clientDto.Name));
+                sb.AppendLine(string.Format(SuccessfullyImportedClients, client.Name));
             }
 
             context.Clients.AddRange(validClients);

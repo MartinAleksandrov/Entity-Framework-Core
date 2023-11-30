@@ -39,12 +39,12 @@
                 {
                     p.Name,
                     p.Price,
-                    Categoty = p.CategoryType.ToString(),
+                    Category = p.CategoryType.ToString(),
                     Clients = p.ProductsClients
                     .Where(pc => pc.Client.Name.Length >= nameLength)
                     .Select(pc => new
                     {
-                        p.Name,
+                        pc.Client.Name,
                         NumberVat = pc.Client.NumberVat,
                     })
                     .OrderBy(pc => pc.Name)

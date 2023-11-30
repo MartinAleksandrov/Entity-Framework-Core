@@ -9,19 +9,19 @@
 
         [XmlElement("Name")]
         [Required]
-        [MinLength(10)]
-        [MaxLength(25)]
+        [StringLength(25, MinimumLength = 10)]
+
         public string Name { get; set; } = null!;
 
 
         [XmlElement("NumberVat")]
-        [MinLength(10)]
-        [MaxLength(15)]
+        [StringLength(15, MinimumLength = 10)]
+
         [Required]
         public string NumberVat { get; set; } = null!;
 
 
         [XmlArray("Addresses")]
-        public ImportClientWhithAddresses[] Addresses { get; set; }
+        public ImportClientWhithAddresses[] Addresses { get; set; } = null!;
     }
 }

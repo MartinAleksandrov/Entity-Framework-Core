@@ -4,27 +4,20 @@ Invalid data!
 Invalid data!
 Invalid data!
 Successfully imported client SPEDOX,SRO.
-Invalid data!
 Successfully imported client FREIGHTS PC.
-Invalid data!
 Successfully imported client LOPERBEN SL.
 Invalid data!
-Invalid data!
 Successfully imported client TRANS CARGO.
-Invalid data!
 Successfully imported client SARL SOVI 34.
 Invalid data!
 Successfully imported client DPS EUROPE AB.
 Invalid data!
-Invalid data!
 Successfully imported client SARL HEBERGECO.
 Invalid data!
 Successfully imported client TG TRUCKS GMBH.
-Invalid data!
 Successfully imported client SARL FLEXATRANS.
 Invalid data!
 Successfully imported client BTS GMBH CO KG.
-Invalid data!
 Invalid data!
 Invalid data!
 Invalid data!
@@ -33,39 +26,25 @@ Successfully imported client KAMEEN LOGISTIC KG.
 Invalid data!
 Invalid data!
 Successfully imported client TALLERES MAVIMA SL.
-Invalid data!
 Successfully imported client SCANIA SLOVAKIA SRO.
 Invalid data!
 Successfully imported client TEAM SERVICE CAR SRL.
-Invalid data!
 Successfully imported client MHS TRUCK SERVICE SRL.
-Invalid data!
 Successfully imported client OFFICINA TURBOCAR SNC.
-Invalid data!
 Successfully imported client SAS TURBOTRUCKS REIMS.
-Invalid data!
 Successfully imported client JOSEF PAUL GMBH COKG.
-Invalid data!
 Successfully imported client LE RELAIS DES PRIMEURS.
 Invalid data!
 Successfully imported client RINALDI GOMME 2012 SRL.
-Invalid data!
 Successfully imported client BECCARO ALFEO EREDI SNC.
-Invalid data!
 Successfully imported client TECNO TRUCK FLLI BEQIRI.
-Invalid data!
 Successfully imported client ALPENTRANS SPEDITION UND.
-Invalid data!
 Successfully imported client B H TRANSPORT LOGISTIK.
-Invalid data!
 Successfully imported client FAHRZEUGBEDARF KOTZ CO.
 Invalid data!
 Successfully imported client FRANZ SCHMID GMBH CO K.
-Invalid data!
 Successfully imported client IVECO TRUCK SERVICES SRL.
-Invalid data!
 Successfully imported client JUAN Y ENRIQUE SANCHEZ GA.
-Invalid data!
 Successfully imported client ROMO BELLIDO SOCIEDAD LIM.
 Invalid data!
 Invalid data!
