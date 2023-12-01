@@ -28,7 +28,6 @@
         public int? NumberBuild { get; set; }
 
 
-        [JsonProperty("Range")]
         [Required]
         [Range(GlobalConstance.MinGunRange,GlobalConstance.MaxGunRange)]
         public int Range { get; set; }
