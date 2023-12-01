@@ -1,26 +1,20 @@
 ﻿namespace Artillery.Data.Models
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using Artillery.Utilities;
-
+    using System.ComponentModel.DataAnnotations.Schema;
     public class Manufacturer
     {
-        public Manufacturer()
-        {
-            Guns = new HashSet<Gun>();
-        }
-
         [Key]
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(GlobalConstance.MaxManufacturerNameLenght)]
-        public string ManufacturerName { get; set; } = null!;
+        [MaxLength(40)]
+        public string ManufacturerName { get; set; }
 
         [Required]
-        [MaxLength(GlobalConstance.MaxFoundedLenght)]
-        public string Founded { get; set; } = null!;
-
-        public ICollection<Gun> Guns { get; set; }
+        [MaxLength(100)]
+        public string Founded { get; set; }
+        public virtual ICollection<Gun> Guns { get; set; } = new HashSet<Gun>();
     }
 }

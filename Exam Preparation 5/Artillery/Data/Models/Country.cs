@@ -1,27 +1,17 @@
 ﻿namespace Artillery.Data.Models
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using Artillery.Utilities; 
-
     public class Country
     {
-        public Country()
-        {
-            CountriesGuns = new HashSet<CountryGun>();
-        }
-
         [Key]
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(GlobalConstance.MaxCountryNameLenght)]
-        public string CountryName  { get; set; } = null!;
+        [MaxLength(60)]
+        public string CountryName { get; set; }
 
-
-        [Required]
-        [MaxLength(GlobalConstance.MaxArmySize)]
-        public int ArmySize  { get; set; }
-
-        public ICollection<CountryGun> CountriesGuns  { get; set; }
+        public int ArmySize { get; set; }
+        public virtual ICollection<CountryGun> CountriesGuns { get; set; } = new HashSet<CountryGun>();
     }
 }

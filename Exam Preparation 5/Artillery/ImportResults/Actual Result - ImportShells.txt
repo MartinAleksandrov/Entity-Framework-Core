@@ -4,19 +4,19 @@ Successfully import shell caliber #203 mm (8 in) weight 146 kg.
 Invalid data.
 Successfully import shell caliber #280 mm (11 in) weight 300 kg.
 Invalid data.
-Invalid data.
+Successfully import shell caliber #460 mm (18 in) weight 1500 kg.
 Successfully import shell caliber #155mm weight 53 kg.
 Successfully import shell caliber #203 MM HOW HE M 106 (8) weight 91 kg.
 Successfully import shell caliber #155 MM HOW HE M107 weight 43.2 kg.
 Successfully import shell caliber #130 MM HE weight 33.4 kg.
 Successfully import shell caliber #122MM HOW HE weight 27 kg.
-Invalid data.
-Invalid data.
+Successfully import shell caliber #105MM HOW weight 19.07 kg.
+Successfully import shell caliber #QF 25 PDR MK 2-1 weight 1253 kg.
 Invalid data.
 Successfully import shell caliber #122 MM HOW HE-D30 weight 28.5 kg.
-Invalid data.
+Successfully import shell caliber #105 XM915 weight 5.5 kg.
 Successfully import shell caliber #155 75-lb weight 21.8 kg.
-Invalid data.
+Successfully import shell caliber #155 M483A1 weight 18.4 kg.
 Successfully import shell caliber #20 mm x 102 TP weight 255 kg.
 Successfully import shell caliber #20 mm x 102 TP-T weight 254 kg.
 Invalid data.
@@ -25,10 +25,10 @@ Successfully import shell caliber #25 mm TPDS-T weight 436 kg.
 Invalid data.
 Successfully import shell caliber #25 mm FAPDS-T weight 440 kg.
 Successfully import shell caliber #25 mm APFSDS-T weight 440 kg.
-Invalid data.
-Invalid data.
+Successfully import shell caliber #30 x 173mm TP-T weight 835 kg.
+Successfully import shell caliber #30 x 180mm HEI-T weight 890 kg.
 Successfully import shell caliber #35 mm TP-T weight 157 kg.
-Invalid data.
+Successfully import shell caliber #40 mm HEI weight 1672 kg.
 Successfully import shell caliber #155 mm HE ERFB RA-BB weight 124 kg.
 Successfully import shell caliber #M777 155mm weight 85 kg.
 Successfully import shell caliber #155mm BONUS MKI weight 56 kg.
@@ -64,7 +64,7 @@ Successfully import shell caliber #120mm MORTAR SMK(WP) weight 91 kg.
 Successfully import shell caliber #120mm MORTAR IL weight 99 kg.
 Invalid data.
 Successfully import shell caliber #105mm L51 HEAT weight 93 kg.
-Invalid data.
+Successfully import shell caliber #105mm L51 TP weight 20 kg.
 Successfully import shell caliber #105mm HE F3B weight 30 kg.
 Successfully import shell caliber #105mm HEAT-TP F3A weight 40 kg.
 Invalid data.
