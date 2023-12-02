@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sPRJ8t3ZzyhIblcjoXBVIH+9kN84pun0kEtgsdmqnhN+UDBf+a9ePM/42sDsURCrdo1yOKtnw83izZtbMVt9KQ==",
+  "dgSpecHash": "aagDXfWVloE1AmgOFZX1K56ZjCgP0k1Vzy6YSCM6YWBhlYUNcF2Un92sHh/Q8Ib7ntH8HLsbtuyHanJMqG8kuA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\35988\\Desktop\\Medicines-Skeleton\\Medicines\\Medicines.csproj",
+  "projectFilePath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\EF Core Final Exam\\Medicines\\Medicines.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\35988\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\35988\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",

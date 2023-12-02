@@ -26,6 +26,6 @@ namespace Medicines.DataProcessor.ExportDtos
 
 
         [XmlArray("Medicines")]
-        public ExportMedicinesDto[] Medicines { get; set; }
+        public ExportMedicinesDto[] Medicines { get; set; } = null!;
     }
 }

@@ -7189,11 +7189,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\35988\\Desktop\\Medicines-Skeleton\\Medicines\\Medicines.csproj",
+      "projectUniqueName": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\EF Core Final Exam\\Medicines\\Medicines.csproj",
       "projectName": "Medicines",
-      "projectPath": "C:\\Users\\35988\\Desktop\\Medicines-Skeleton\\Medicines\\Medicines.csproj",
+      "projectPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\EF Core Final Exam\\Medicines\\Medicines.csproj",
       "packagesPath": "C:\\Users\\35988\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\35988\\Desktop\\Medicines-Skeleton\\Medicines\\obj\\",
+      "outputPath": "C:\\Users\\35988\\Desktop\\Entity-Framework-Core\\EF Core Final Exam\\Medicines\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\35988\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -22,7 +22,7 @@ namespace Medicines.DataProcessor.ExportDtos
 
         [Required]
         [XmlElement("Price")]
-        public string Price { get; set; }
+        public string Price { get; set; } = null!;
 
         [Required]
         [XmlElement("Producer")]

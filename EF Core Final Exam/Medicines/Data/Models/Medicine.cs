@@ -15,7 +15,7 @@ namespace Medicines.Data.Models
         {
             PatientsMedicines = new HashSet<PatientMedicine>();
         }
-
+        
         [Key]
         public int Id { get; set; }
 

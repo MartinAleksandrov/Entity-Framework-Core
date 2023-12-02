@@ -24,7 +24,7 @@
 
             var validPatients = new HashSet<Patient>();
 
-            foreach (var patientDto in jsonPatients)
+            foreach (var patientDto in jsonPatients!)
             {
                 if (!IsValid(patientDto))
                 {
