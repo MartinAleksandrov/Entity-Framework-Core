@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Medicines.Data.Models
+﻿namespace Medicines.Data.Models
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class Pharmacy
     {
         public Pharmacy()
@@ -26,7 +21,7 @@ namespace Medicines.Data.Models
         public string PhoneNumber { get; set; } = null!;
 
         [Required]
-        public bool IsNonStop  { get; set; }
+        public bool IsNonStop { get; set; }
 
         public ICollection<Medicine> Medicines { get; set; }
 

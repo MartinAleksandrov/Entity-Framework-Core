@@ -30,6 +30,7 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Creating composite PRIMARY KEY
             modelBuilder.Entity<PatientMedicine>()
                   .HasKey(pm => new { pm.PatientId, pm.MedicineId });
         }

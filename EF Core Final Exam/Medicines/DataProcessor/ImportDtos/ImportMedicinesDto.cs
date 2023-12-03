@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
-
-namespace Medicines.DataProcessor.ImportDtos
+﻿namespace Medicines.DataProcessor.ImportDtos
 {
+    using System.ComponentModel.DataAnnotations;
+    using System.Xml.Serialization;
+    
     [XmlType("Medicine")]
     public class ImportMedicinesDto
     {

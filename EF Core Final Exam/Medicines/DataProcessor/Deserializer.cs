@@ -1,8 +1,8 @@
 ﻿namespace Medicines.DataProcessor
 {
     using Medicines.Data;
-    using Medicines.Data.Models;
-    using Medicines.Data.Models.Enums;
+    using Data.Models;
+    using Data.Models.Enums;
     using Medicines.DataProcessor.ImportDtos;
     using Newtonsoft.Json;
     using ProductShop.Utilities;

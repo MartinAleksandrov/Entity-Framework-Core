@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Medicines.Utilities
+﻿namespace Medicines.Utilities
 {
     public class GlobalConstance
     {
+        //Country
         public const string PhoneNumberRegex = @"^\(\d{3}\) \d{3}-\d{4}$";
     }
 }
